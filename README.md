@@ -17,4 +17,4 @@ APIはまだ用意してません。
 MIT License で公開しています。詳細は[LICENSE](./LICENSE)を参照してください。
 
 > [!NOTE]
-> AviUtl2カタログのアイコンのサンプルでは[komorin](https://x.com/komorin1342)氏によるしりたいちゃんを使用しています。
+> AviUtl2カタログのアイコンのサンプルでは[komorin](https://x.com/komorin1342)氏デザインの「しりたいちゃん」を使用しています。
