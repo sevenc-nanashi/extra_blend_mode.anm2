@@ -223,30 +223,6 @@ conda_deps = [
     "liblzma-5.8.3-hfd05255_1",
 ]
 
-[[tools."github:karoterra/aviutl2-aulua"]]
-version = "0.14.0"
-backend = "github:karoterra/aviutl2-aulua"
-specifiers = ["latest"]
-
-[tools."github:karoterra/aviutl2-aulua"."platforms.linux-x64"]
-checksum = "sha256:ed87b11e3a06b7d843d40d0b1605626d2a982f411b66b18da51dc4c175336696"
-url = "https://github.com/karoterra/aviutl2-aulua/releases/download/v0.14.0/aulua-v0.14.0-linux-x64.tar.gz"
-url_api = "https://api.github.com/repos/karoterra/aviutl2-aulua/releases/assets/525050796"
-provenance = "github-attestations"
-
-[tools."github:karoterra/aviutl2-aulua"."platforms.linux-x64-musl"]
-checksum = "sha256:ed87b11e3a06b7d843d40d0b1605626d2a982f411b66b18da51dc4c175336696"
-url = "https://github.com/karoterra/aviutl2-aulua/releases/download/v0.14.0/aulua-v0.14.0-linux-x64.tar.gz"
-url_api = "https://api.github.com/repos/karoterra/aviutl2-aulua/releases/assets/525050796"
-provenance = "github-attestations"
-
-[tools."github:karoterra/aviutl2-aulua"."platforms.windows-x64"]
-checksum = "sha256:814caa59b276a2d5f28c421c7259cb0d5e0373bf853d524600383bd2e2661fe9"
-url = "https://github.com/karoterra/aviutl2-aulua/releases/download/v0.14.0/aulua-v0.14.0-windows-x64.zip"
-url_api = "https://api.github.com/repos/karoterra/aviutl2-aulua/releases/assets/525050795"
-provenance = "github-attestations"
-provenance_verified = true
-
 [[tools.ruby]]
 version = "4.0.6"
 backend = "core:ruby"

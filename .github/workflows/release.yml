@@ -20,6 +20,19 @@ jobs:
         with:
           submodules: "recursive"
 
+      - name: Set up Rust
+        shell: bash
+        run: |
+          rustup toolchain install --profile minimal
+
+      - name: Cache rust
+        uses: Swatinem/rust-cache@v2
+
+      - name: Set up cargo-binstall
+        uses: taiki-e/install-action@v2
+        with:
+          tool: cargo-binstall
+
       - name: Set up mise
         uses: jdx/mise-action@v4
         with:
