@@ -1,0 +1,42 @@
+name: Build
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version to release"
+        required: true
+
+jobs:
+  build:
+    runs-on: windows-latest
+    environment: publish
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+        with:
+          submodules: "recursive"
+
+      - name: Set up mise
+        uses: jdx/mise-action@v4
+        with:
+          install: true
+          experimental: true
+
+      - name: Build package
+        run: |
+          au2 release --set-version "${{ github.event.inputs.version }}"
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v3
+        with:
+          tag_name: ${{ github.event.inputs.version }}
+          body: |
+            `sevenc-nanashi.extra_blend_mode-anm2-v${{ github.event.inputs.version }}.au2pkg.zip`をダウンロードし、AviUtl2のプレビュー画面にそのままドラッグ&ドロップしてください。
+          prerelease: "${{ contains(github.event.inputs.version, '-') }}"
+          files: |
+            ./release/catalog.json
+            ./release/sevenc-nanashi.extra_blend_mode-anm2-v*.au2pkg.zip
