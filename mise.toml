@@ -1,0 +1,4 @@
+[tools]
+"cargo:aviutl2-cli" = "latest"
+clang-format = "latest"
+ruby = "latest"

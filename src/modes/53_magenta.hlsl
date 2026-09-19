@@ -1,0 +1,2 @@
+// label: MAGENTA
+float3 Blend(float3 s, float3 b) { return float3(s.r, b.g, s.b); }

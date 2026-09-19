@@ -1,0 +1,14 @@
+#:schema ./.aviutl2-cli/aviutl2.schema.json
+# 設定ファイルについては https://github.com/sevenc-nanashi/aviutl2-cli を参照してください。
+[project]
+id = "sevenc-nanashi.extra_blend_mode-anm2"
+name = "extra_blend_mode.anm2"
+version = "0.1.0"
+
+[development]
+aviutl2_version = "latest"
+
+[artifacts.extra_blend_mode_anm2-anm2]
+destination = "Script/extra_blend_mode.anm2.anm2"
+source = "./build/extra_blend_mode.anm2.anm2"
+build = "ruby build.rb"
